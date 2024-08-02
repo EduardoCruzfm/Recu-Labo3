@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Primer Parcial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/Manejadore.js"></script>
+  <!-- AGREGAR ARCHIVOS JS AQUI -->
+
+
+</head>
+
+<body style="background-color:rgb(6, 165, 165)">
+ <br>
+  <div class="container" style="background-color:rgb(19, 107, 136)">
+    <br>
+    <h2 style="background-color:rgb(110, 8, 110);color:ghostwhite">Apellido y nombre del alumno</h2>
+
+    <h4>CRUD - Sobres</h4>
+
+      <table class="table table" style="width:95%">
+        <tr>
+          <td style="width:50%">
+            <table class="table table-bordered table-hover" style="background-color:rgb(195, 199, 202)">
+              <tr>
+                <td><label class="col control-label">Id</label></td>
+                <td><input type="text" id="id" readonly /></td>
+              </tr>
+              <tr>
+                <td><label class="col control-label">Dirección destinatario</label></td>
+                <td><input type="text" id="direccion_destinatario" /></td>
+              </tr>
+              <tr>
+                <td><label class="col control-label">Remitente</label></td>
+                <td><input type="text" id="remitente" /></td>
+              </tr>
+              <tr>
+                <td><label class="col control-label">Precio estampilla</label></td>
+                <td><input type="number" id="precio_estampilla" min="200" max="1500" value="" /></td>
+              </tr>              
+              <tr>
+                <td colspan="2" class="col">
+                  <input type="button" value="Agregar" id="btn-agregar" class="btn btn-success" onclick="PrimerParcial.Manejadora.AgregarSobre()" />
+                  <input type="button" value="Mostrar" class="btn btn-info" onclick="PrimerParcial.Manejadora.MostrarSobres()" />    
+                  <input type="button" value="Verificar" class="btn btn-dark" onclick="PrimerParcial.Manejadora.VerificarSobre()" />
+                  <input type="button" value="Modificar" class="btn btn-warning" onclick="PrimerParcial.Manejadora.ModificarSobre()" />
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <div class="" style="background-color:rgb(224, 119, 198);">
+              <div id="divTabla">
+                tabla aqu&iacute;...
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    <input type="hidden" id="hdnIdModificacion">
+    
+  </div>
+</body>
+
+</html>
